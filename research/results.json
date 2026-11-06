@@ -1,0 +1,1254 @@
+{
+  "data": {
+    "doi": "10.17632/8wfntyb7v4.1",
+    "label": "historically implemented EOR family",
+    "license": "CC BY 4.0",
+    "n_censor_flag": 3,
+    "n_field_groups": 36,
+    "n_range_flag": 23,
+    "n_rows": 36,
+    "sha256": "d2c1b1171d6e04f04b79d5240d6829a1abb25db8318021009efc77a463104dc9"
+  },
+  "folds": [
+    {
+      "n_calibration": 9,
+      "n_test": 7,
+      "n_train": 20,
+      "test_fold": 0,
+      "threshold": 0.7294430772,
+      "threshold_is_maximum_calibration_score": true
+    },
+    {
+      "n_calibration": 9,
+      "n_test": 6,
+      "n_train": 21,
+      "test_fold": 1,
+      "threshold": 0.7106140478,
+      "threshold_is_maximum_calibration_score": true
+    },
+    {
+      "n_calibration": 9,
+      "n_test": 6,
+      "n_train": 21,
+      "test_fold": 2,
+      "threshold": 0.7658120957,
+      "threshold_is_maximum_calibration_score": true
+    },
+    {
+      "n_calibration": 9,
+      "n_test": 6,
+      "n_train": 21,
+      "test_fold": 3,
+      "threshold": 0.810809954,
+      "threshold_is_maximum_calibration_score": true
+    },
+    {
+      "n_calibration": 9,
+      "n_test": 6,
+      "n_train": 21,
+      "test_fold": 4,
+      "threshold": 0.7868578057,
+      "threshold_is_maximum_calibration_score": true
+    },
+    {
+      "n_calibration": 9,
+      "n_test": 5,
+      "n_train": 22,
+      "test_fold": 5,
+      "threshold": 0.7447688405,
+      "threshold_is_maximum_calibration_score": true
+    }
+  ],
+  "procedure": {
+    "criteria": "Taber, Martin, Seright 1997 recommended numeric limits",
+    "criteria_omitted": [
+      "oil_saturation",
+      "composition",
+      "formation_type",
+      "net_thickness"
+    ],
+    "features": [
+      "phi_pct",
+      "log10_k_md",
+      "depth_ft",
+      "temp_f",
+      "api",
+      "log10_mu_cp"
+    ],
+    "l2": 1.0,
+    "model": "L2 multinomial logistic regression",
+    "nominal_coverage": 0.9,
+    "nonconformity": "1 - probability of the candidate family",
+    "note": "Each field group is held out in one fold. Within the complement, every third project inside a family is the calibration set and the rest fit an L2 multinomial logistic regression. The 90 percent split-conformal rule uses rank ceil((n_cal+1)*0.9). At the calibration sizes in this file that rank is the largest calibration score, so a set contains every family whose score is no larger than that value. Pooled coverage describes these folds; it is not a second guarantee. The historical family is the process that was implemented, not a proof that it was the best process. The criteria rule applies only the 1997 recommended numeric limits for variables present in the file.",
+    "split": "field group, stratified by family, six folds"
+  },
+  "projects": [
+    {
+      "case_id": "A02",
+      "censor_flag": false,
+      "conformal_set": [
+        "Gas"
+      ],
+      "field_group": "Kalol",
+      "historical_family": "Chemical",
+      "historical_method": "ASP",
+      "point_family": "Gas",
+      "point_matches_historical": false,
+      "probability": {
+        "Chemical": 0.1874420533,
+        "Gas": 0.7032014349,
+        "Thermal": 0.1093565118
+      },
+      "range_flag": true,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "rule_methods": [
+        "co2_miscible",
+        "combustion",
+        "hydrocarbon_miscible",
+        "immiscible_gas",
+        "micellar_asp_alkaline"
+      ],
+      "set_contains_historical": false,
+      "test_fold": 2
+    },
+    {
+      "case_id": "A04",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "field_group": "Viraj",
+      "historical_family": "Chemical",
+      "historical_method": "ASP",
+      "point_family": "Chemical",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.3688470983,
+        "Gas": 0.2764166692,
+        "Thermal": 0.3547362325
+      },
+      "range_flag": true,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "rule_methods": [
+        "combustion",
+        "immiscible_gas",
+        "polymer",
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 3
+    },
+    {
+      "case_id": "A05",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "field_group": "La-Sa-Xing",
+      "historical_family": "Chemical",
+      "historical_method": "ASP",
+      "point_family": "Gas",
+      "point_matches_historical": false,
+      "probability": {
+        "Chemical": 0.2791553531,
+        "Gas": 0.4467666755,
+        "Thermal": 0.2740779714
+      },
+      "range_flag": true,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "rule_methods": [
+        "co2_miscible",
+        "combustion",
+        "immiscible_gas",
+        "micellar_asp_alkaline",
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 3
+    },
+    {
+      "case_id": "C11",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Thermal"
+      ],
+      "field_group": "Bhagyam",
+      "historical_family": "Chemical",
+      "historical_method": "Polymer",
+      "point_family": "Thermal",
+      "point_matches_historical": false,
+      "probability": {
+        "Chemical": 0.3497934805,
+        "Gas": 0.2477283841,
+        "Thermal": 0.4024781354
+      },
+      "range_flag": true,
+      "rule_contains_historical": false,
+      "rule_exact": false,
+      "rule_families": [
+        "Thermal"
+      ],
+      "rule_methods": [
+        "combustion",
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 0
+    },
+    {
+      "case_id": "C12",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Gas"
+      ],
+      "field_group": "Palogrande-Ceb\u00fa",
+      "historical_family": "Chemical",
+      "historical_method": "Polymer",
+      "point_family": "Gas",
+      "point_matches_historical": false,
+      "probability": {
+        "Chemical": 0.3189784513,
+        "Gas": 0.530474259,
+        "Thermal": 0.1505472897
+      },
+      "range_flag": true,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "rule_methods": [
+        "combustion",
+        "immiscible_gas",
+        "polymer"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 0
+    },
+    {
+      "case_id": "C13",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Thermal"
+      ],
+      "field_group": "Milne Point",
+      "historical_family": "Chemical",
+      "historical_method": "Polymer",
+      "point_family": "Thermal",
+      "point_matches_historical": false,
+      "probability": {
+        "Chemical": 0.3420387604,
+        "Gas": 0.1728494778,
+        "Thermal": 0.4851117619
+      },
+      "range_flag": true,
+      "rule_contains_historical": false,
+      "rule_exact": false,
+      "rule_families": [
+        "Gas",
+        "Thermal"
+      ],
+      "rule_methods": [
+        "immiscible_gas",
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 5
+    },
+    {
+      "case_id": "G01",
+      "censor_flag": false,
+      "conformal_set": [
+        "Gas"
+      ],
+      "field_group": "Rangely",
+      "historical_family": "Gas",
+      "historical_method": "CO2 EOR",
+      "point_family": "Gas",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.1827139872,
+        "Gas": 0.7696440012,
+        "Thermal": 0.0476420115
+      },
+      "range_flag": false,
+      "rule_contains_historical": true,
+      "rule_exact": true,
+      "rule_families": [
+        "Gas"
+      ],
+      "rule_methods": [
+        "co2_miscible",
+        "hydrocarbon_miscible",
+        "immiscible_gas"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 5
+    },
+    {
+      "case_id": "G02",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Gas"
+      ],
+      "field_group": "Bell Creek",
+      "historical_family": "Gas",
+      "historical_method": "CO2 EOR",
+      "point_family": "Gas",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.318994548,
+        "Gas": 0.4822187626,
+        "Thermal": 0.1987866894
+      },
+      "range_flag": false,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "rule_methods": [
+        "co2_miscible",
+        "combustion",
+        "hydrocarbon_miscible",
+        "immiscible_gas",
+        "micellar_asp_alkaline"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 0
+    },
+    {
+      "case_id": "G03",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Gas"
+      ],
+      "field_group": "Delhi",
+      "historical_family": "Gas",
+      "historical_method": "CO2 EOR",
+      "point_family": "Gas",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.3422719712,
+        "Gas": 0.4526131369,
+        "Thermal": 0.2051148919
+      },
+      "range_flag": false,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "rule_methods": [
+        "co2_miscible",
+        "combustion",
+        "immiscible_gas",
+        "micellar_asp_alkaline",
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 1
+    },
+    {
+      "case_id": "G04",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "field_group": "West Hastings",
+      "historical_family": "Gas",
+      "historical_method": "CO2 EOR",
+      "point_family": "Gas",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.2992770109,
+        "Gas": 0.4960015801,
+        "Thermal": 0.2047214089
+      },
+      "range_flag": false,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "rule_methods": [
+        "co2_miscible",
+        "combustion",
+        "hydrocarbon_miscible",
+        "immiscible_gas",
+        "micellar_asp_alkaline"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 3
+    },
+    {
+      "case_id": "G05",
+      "censor_flag": false,
+      "conformal_set": [
+        "Gas"
+      ],
+      "field_group": "Salt Creek",
+      "historical_family": "Gas",
+      "historical_method": "CO2 EOR",
+      "point_family": "Gas",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.2178445933,
+        "Gas": 0.5825328789,
+        "Thermal": 0.1996225277
+      },
+      "range_flag": false,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas"
+      ],
+      "rule_methods": [
+        "immiscible_gas",
+        "micellar_asp_alkaline"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 1
+    },
+    {
+      "case_id": "G06",
+      "censor_flag": false,
+      "conformal_set": [
+        "Gas"
+      ],
+      "field_group": "North Ward Estes",
+      "historical_family": "Gas",
+      "historical_method": "CO2 EOR",
+      "point_family": "Gas",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.1843539676,
+        "Gas": 0.6448794904,
+        "Thermal": 0.1707665421
+      },
+      "range_flag": false,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas"
+      ],
+      "rule_methods": [
+        "co2_miscible",
+        "immiscible_gas",
+        "micellar_asp_alkaline"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 3
+    },
+    {
+      "case_id": "G07",
+      "censor_flag": false,
+      "conformal_set": [
+        "Gas"
+      ],
+      "field_group": "Twofreds",
+      "historical_family": "Gas",
+      "historical_method": "CO2 EOR",
+      "point_family": "Gas",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.180360637,
+        "Gas": 0.6872043124,
+        "Thermal": 0.1324350506
+      },
+      "range_flag": false,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas"
+      ],
+      "rule_methods": [
+        "co2_miscible",
+        "hydrocarbon_miscible",
+        "immiscible_gas",
+        "micellar_asp_alkaline"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 2
+    },
+    {
+      "case_id": "G08",
+      "censor_flag": false,
+      "conformal_set": [
+        "Gas"
+      ],
+      "field_group": "SACROC",
+      "historical_family": "Gas",
+      "historical_method": "CO2 EOR",
+      "point_family": "Gas",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.1755249286,
+        "Gas": 0.7653442554,
+        "Thermal": 0.059130816
+      },
+      "range_flag": false,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas"
+      ],
+      "rule_methods": [
+        "co2_miscible",
+        "hydrocarbon_miscible",
+        "immiscible_gas",
+        "micellar_asp_alkaline"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 0
+    },
+    {
+      "case_id": "G09",
+      "censor_flag": false,
+      "conformal_set": [
+        "Gas"
+      ],
+      "field_group": "Katz",
+      "historical_family": "Gas",
+      "historical_method": "CO2 EOR",
+      "point_family": "Gas",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.1773267408,
+        "Gas": 0.698042305,
+        "Thermal": 0.1246309542
+      },
+      "range_flag": false,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "rule_methods": [
+        "co2_miscible",
+        "combustion",
+        "hydrocarbon_miscible",
+        "immiscible_gas",
+        "micellar_asp_alkaline"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 2
+    },
+    {
+      "case_id": "G10",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Gas"
+      ],
+      "field_group": "Yates",
+      "historical_family": "Gas",
+      "historical_method": "CO2 EOR",
+      "point_family": "Gas",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.3089339067,
+        "Gas": 0.4621058662,
+        "Thermal": 0.2289602271
+      },
+      "range_flag": false,
+      "rule_contains_historical": false,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical"
+      ],
+      "rule_methods": [
+        "micellar_asp_alkaline"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 5
+    },
+    {
+      "case_id": "G11",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Gas"
+      ],
+      "field_group": "West Ranch",
+      "historical_family": "Gas",
+      "historical_method": "CO2 EOR",
+      "point_family": "Gas",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.2954923612,
+        "Gas": 0.5294450843,
+        "Thermal": 0.1750625545
+      },
+      "range_flag": true,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "rule_methods": [
+        "co2_miscible",
+        "combustion",
+        "hydrocarbon_miscible",
+        "immiscible_gas",
+        "micellar_asp_alkaline"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 4
+    },
+    {
+      "case_id": "G12",
+      "censor_flag": false,
+      "conformal_set": [
+        "Gas"
+      ],
+      "field_group": "Postle",
+      "historical_family": "Gas",
+      "historical_method": "CO2 EOR",
+      "point_family": "Gas",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.1559606125,
+        "Gas": 0.7594171688,
+        "Thermal": 0.0846222187
+      },
+      "range_flag": false,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas"
+      ],
+      "rule_methods": [
+        "co2_miscible",
+        "hydrocarbon_miscible",
+        "immiscible_gas",
+        "micellar_asp_alkaline"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 4
+    },
+    {
+      "case_id": "P01",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "field_group": "West Cat Canyon",
+      "historical_family": "Chemical",
+      "historical_method": "Polymer",
+      "point_family": "Gas",
+      "point_matches_historical": false,
+      "probability": {
+        "Chemical": 0.2932101338,
+        "Gas": 0.361189545,
+        "Thermal": 0.3456003212
+      },
+      "range_flag": false,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "rule_methods": [
+        "combustion",
+        "immiscible_gas",
+        "polymer",
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 4
+    },
+    {
+      "case_id": "P02",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "field_group": "Marmul",
+      "historical_family": "Chemical",
+      "historical_method": "Polymer",
+      "point_family": "Thermal",
+      "point_matches_historical": false,
+      "probability": {
+        "Chemical": 0.3182375486,
+        "Gas": 0.2780368454,
+        "Thermal": 0.4037256061
+      },
+      "range_flag": true,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "rule_methods": [
+        "combustion",
+        "immiscible_gas",
+        "polymer",
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 4
+    },
+    {
+      "case_id": "P03",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "field_group": "SZ36-1",
+      "historical_family": "Chemical",
+      "historical_method": "Polymer",
+      "point_family": "Chemical",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.3646241009,
+        "Gas": 0.2770086944,
+        "Thermal": 0.3583672047
+      },
+      "range_flag": true,
+      "rule_contains_historical": false,
+      "rule_exact": false,
+      "rule_families": [
+        "Gas",
+        "Thermal"
+      ],
+      "rule_methods": [
+        "combustion",
+        "immiscible_gas"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 2
+    },
+    {
+      "case_id": "P04",
+      "censor_flag": false,
+      "conformal_set": [
+        "Thermal"
+      ],
+      "field_group": "Pelican Lake",
+      "historical_family": "Chemical",
+      "historical_method": "Polymer",
+      "point_family": "Thermal",
+      "point_matches_historical": false,
+      "probability": {
+        "Chemical": 0.2239218629,
+        "Gas": 0.1440060603,
+        "Thermal": 0.6320720768
+      },
+      "range_flag": true,
+      "rule_contains_historical": false,
+      "rule_exact": false,
+      "rule_families": [
+        "Thermal"
+      ],
+      "rule_methods": [
+        "steam"
+      ],
+      "set_contains_historical": false,
+      "test_fold": 1
+    },
+    {
+      "case_id": "P05",
+      "censor_flag": false,
+      "conformal_set": [
+        "Thermal"
+      ],
+      "field_group": "East Bodo",
+      "historical_family": "Chemical",
+      "historical_method": "Polymer",
+      "point_family": "Thermal",
+      "point_matches_historical": false,
+      "probability": {
+        "Chemical": 0.2549003149,
+        "Gas": 0.1922468018,
+        "Thermal": 0.5528528833
+      },
+      "range_flag": true,
+      "rule_contains_historical": false,
+      "rule_exact": false,
+      "rule_families": [
+        "Thermal"
+      ],
+      "rule_methods": [
+        "steam"
+      ],
+      "set_contains_historical": false,
+      "test_fold": 1
+    },
+    {
+      "case_id": "T01",
+      "censor_flag": true,
+      "conformal_set": [
+        "Thermal"
+      ],
+      "field_group": "Christina Lake",
+      "historical_family": "Thermal",
+      "historical_method": "SAGD",
+      "point_family": "Thermal",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.1818612539,
+        "Gas": 0.0710997844,
+        "Thermal": 0.7470389616
+      },
+      "range_flag": true,
+      "rule_contains_historical": false,
+      "rule_exact": false,
+      "rule_families": [],
+      "rule_methods": [],
+      "set_contains_historical": true,
+      "test_fold": 1
+    },
+    {
+      "case_id": "T06",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Gas",
+        "Thermal"
+      ],
+      "field_group": "Liaohe Du 66",
+      "historical_family": "Thermal",
+      "historical_method": "ISC",
+      "point_family": "Chemical",
+      "point_matches_historical": false,
+      "probability": {
+        "Chemical": 0.4027256904,
+        "Gas": 0.3017647906,
+        "Thermal": 0.295509519
+      },
+      "range_flag": true,
+      "rule_contains_historical": true,
+      "rule_exact": true,
+      "rule_families": [
+        "Thermal"
+      ],
+      "rule_methods": [
+        "combustion",
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 5
+    },
+    {
+      "case_id": "T10",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Thermal"
+      ],
+      "field_group": "Kern River",
+      "historical_family": "Thermal",
+      "historical_method": "Steam Flood",
+      "point_family": "Thermal",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.3169942728,
+        "Gas": 0.1063809439,
+        "Thermal": 0.5766247832
+      },
+      "range_flag": true,
+      "rule_contains_historical": true,
+      "rule_exact": true,
+      "rule_families": [
+        "Thermal"
+      ],
+      "rule_methods": [
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 4
+    },
+    {
+      "case_id": "T12",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Thermal"
+      ],
+      "field_group": "Cold Lake",
+      "historical_family": "Thermal",
+      "historical_method": "CSS",
+      "point_family": "Thermal",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.2937656239,
+        "Gas": 0.097115761,
+        "Thermal": 0.6091186151
+      },
+      "range_flag": true,
+      "rule_contains_historical": true,
+      "rule_exact": true,
+      "rule_families": [
+        "Thermal"
+      ],
+      "rule_methods": [
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 2
+    },
+    {
+      "case_id": "T13",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Thermal"
+      ],
+      "field_group": "Duri",
+      "historical_family": "Thermal",
+      "historical_method": "Steam Flood",
+      "point_family": "Thermal",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.3258237051,
+        "Gas": 0.1810064118,
+        "Thermal": 0.4931698831
+      },
+      "range_flag": false,
+      "rule_contains_historical": true,
+      "rule_exact": true,
+      "rule_families": [
+        "Thermal"
+      ],
+      "rule_methods": [
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 3
+    },
+    {
+      "case_id": "T14",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Thermal"
+      ],
+      "field_group": "San Ardo",
+      "historical_family": "Thermal",
+      "historical_method": "Steam Flood",
+      "point_family": "Thermal",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.3497641054,
+        "Gas": 0.2041883351,
+        "Thermal": 0.4460475595
+      },
+      "range_flag": true,
+      "rule_contains_historical": true,
+      "rule_exact": true,
+      "rule_families": [
+        "Thermal"
+      ],
+      "rule_methods": [
+        "combustion",
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 2
+    },
+    {
+      "case_id": "T15",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Thermal"
+      ],
+      "field_group": "Wilmington",
+      "historical_family": "Thermal",
+      "historical_method": "Steam Flood",
+      "point_family": "Thermal",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.3508547194,
+        "Gas": 0.2352815718,
+        "Thermal": 0.4138637088
+      },
+      "range_flag": true,
+      "rule_contains_historical": true,
+      "rule_exact": false,
+      "rule_families": [
+        "Gas",
+        "Thermal"
+      ],
+      "rule_methods": [
+        "combustion",
+        "immiscible_gas",
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 0
+    },
+    {
+      "case_id": "T16",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Thermal"
+      ],
+      "field_group": "South Belridge",
+      "historical_family": "Thermal",
+      "historical_method": "Steam Flood",
+      "point_family": "Thermal",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.3329187023,
+        "Gas": 0.1312130115,
+        "Thermal": 0.5358682862
+      },
+      "range_flag": true,
+      "rule_contains_historical": true,
+      "rule_exact": true,
+      "rule_families": [
+        "Thermal"
+      ],
+      "rule_methods": [
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 3
+    },
+    {
+      "case_id": "T17",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Thermal"
+      ],
+      "field_group": "Bellevue",
+      "historical_family": "Thermal",
+      "historical_method": "ISC",
+      "point_family": "Thermal",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.27345713,
+        "Gas": 0.2049371259,
+        "Thermal": 0.5216057441
+      },
+      "range_flag": true,
+      "rule_contains_historical": true,
+      "rule_exact": true,
+      "rule_families": [
+        "Thermal"
+      ],
+      "rule_methods": [
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 0
+    },
+    {
+      "case_id": "T18",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Thermal"
+      ],
+      "field_group": "Suplacu de Barcau",
+      "historical_family": "Thermal",
+      "historical_method": "ISC",
+      "point_family": "Thermal",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.2996745429,
+        "Gas": 0.1391513556,
+        "Thermal": 0.5611741015
+      },
+      "range_flag": true,
+      "rule_contains_historical": true,
+      "rule_exact": true,
+      "rule_families": [
+        "Thermal"
+      ],
+      "rule_methods": [
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 4
+    },
+    {
+      "case_id": "T19",
+      "censor_flag": true,
+      "conformal_set": [
+        "Thermal"
+      ],
+      "field_group": "MacKay River",
+      "historical_family": "Thermal",
+      "historical_method": "SAGD",
+      "point_family": "Thermal",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.2137360677,
+        "Gas": 0.0843714876,
+        "Thermal": 0.7018924446
+      },
+      "range_flag": true,
+      "rule_contains_historical": false,
+      "rule_exact": false,
+      "rule_families": [],
+      "rule_methods": [],
+      "set_contains_historical": true,
+      "test_fold": 0
+    },
+    {
+      "case_id": "T20",
+      "censor_flag": false,
+      "conformal_set": [
+        "Chemical",
+        "Thermal"
+      ],
+      "field_group": "Surmont",
+      "historical_family": "Thermal",
+      "historical_method": "SAGD",
+      "point_family": "Thermal",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.2760086565,
+        "Gas": 0.050962653,
+        "Thermal": 0.6730286905
+      },
+      "range_flag": true,
+      "rule_contains_historical": false,
+      "rule_exact": false,
+      "rule_families": [],
+      "rule_methods": [],
+      "set_contains_historical": true,
+      "test_fold": 5
+    },
+    {
+      "case_id": "T21",
+      "censor_flag": true,
+      "conformal_set": [
+        "Thermal"
+      ],
+      "field_group": "Peace River",
+      "historical_family": "Thermal",
+      "historical_method": "CSS",
+      "point_family": "Thermal",
+      "point_matches_historical": true,
+      "probability": {
+        "Chemical": 0.2274926656,
+        "Gas": 0.112540223,
+        "Thermal": 0.6599671114
+      },
+      "range_flag": true,
+      "rule_contains_historical": true,
+      "rule_exact": true,
+      "rule_families": [
+        "Thermal"
+      ],
+      "rule_methods": [
+        "steam"
+      ],
+      "set_contains_historical": true,
+      "test_fold": 1
+    }
+  ],
+  "submission": {
+    "call": "TechScience ENERGY, Next-Generation Power Systems",
+    "deadline": "2027-02-01",
+    "decision": "do_not_submit",
+    "manuscript_uploaded": false,
+    "patent_counsel_review": "not_requested"
+  },
+  "test": {
+    "by_family": {
+      "Chemical": {
+        "conformal_contains": 8,
+        "n": 11,
+        "point_matches": 2,
+        "rule_contains": 6,
+        "rule_exact": 0
+      },
+      "Gas": {
+        "conformal_contains": 12,
+        "n": 12,
+        "point_matches": 12,
+        "rule_contains": 11,
+        "rule_exact": 1
+      },
+      "Thermal": {
+        "conformal_contains": 13,
+        "n": 13,
+        "point_matches": 12,
+        "rule_contains": 10,
+        "rule_exact": 9
+      }
+    },
+    "conformal_contains_historical": {
+      "count": 33,
+      "n": 36
+    },
+    "mean_set_size": 1.8333333333,
+    "n": 36,
+    "n_empty_sets": 0,
+    "point_matches_historical": {
+      "count": 26,
+      "n": 36
+    },
+    "rule_contains_historical": {
+      "count": 27,
+      "n": 36
+    },
+    "rule_exact": {
+      "count": 10,
+      "n": 36
+    }
+  }
+}
