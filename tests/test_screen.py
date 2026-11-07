@@ -9,6 +9,7 @@ import pytest
 
 from eorscreen.criteria import families_passing, methods_passing
 from eorscreen.model import conformal_threshold, fit_softmax, predict_proba
+from eorscreen.report import abstract_text, manuscript_text, measured_block
 from eorscreen.split import assign_folds, field_groups, roles_for_fold
 from eorscreen.study import DATA_SHA256, load_rows, run
 
@@ -104,3 +105,22 @@ def test_results_file_is_the_script_output():
         assert project["set_contains_historical"] == (
             project["historical_family"] in project["conformal_set"]
         )
+
+
+def test_article_text_is_the_script_output_and_the_abstract_length_fits():
+    fresh = run(DATA)
+    block = measured_block(fresh)
+    for relative in (
+        "README.md",
+        "docs/JOURNAL_FIT.md",
+        "docs/TRL.md",
+        "docs/ACHIEVEMENTS.md",
+    ):
+        assert block in (ROOT / relative).read_text(encoding="utf-8")
+    abstract = abstract_text(fresh)
+    words = abstract.split()
+    assert 200 <= len(words) <= 400
+    assert abstract in (ROOT / "article" / "abstract.md").read_text(encoding="utf-8")
+    assert (ROOT / "article" / "manuscript.txt").read_text(encoding="utf-8") == manuscript_text(
+        fresh
+    )

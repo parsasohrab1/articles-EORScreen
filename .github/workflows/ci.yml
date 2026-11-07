@@ -13,4 +13,4 @@ jobs:
       - run: ruff check src tests research
       - run: python -m pytest -q
       - run: python research/run_study.py
-      - run: git diff --exit-code research/results.json
+      - run: git diff --exit-code -- research/results.json README.md article docs/JOURNAL_FIT.md docs/TRL.md docs/ACHIEVEMENTS.md

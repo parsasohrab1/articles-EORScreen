@@ -228,10 +228,14 @@ def _summary(rows: list[dict], projects: list[dict], folds: list[dict]) -> dict:
         },
         "projects": projects,
         "submission": {
-            "call": "TechScience ENERGY, Next-Generation Power Systems",
+            "call": (
+                "TechScience ENERGY, Recent Advances in Sustainable and "
+                "Intelligent Petroleum Engineering"
+            ),
             "deadline": "2027-02-01",
-            "decision": "do_not_submit",
+            "decision": "do_not_upload",
             "manuscript_uploaded": False,
             "patent_counsel_review": "not_requested",
+            "out_of_scope_call": "TechScience ENERGY, Next-Generation Power Systems",
         },
     }

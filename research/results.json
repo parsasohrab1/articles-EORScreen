@@ -1201,10 +1201,11 @@
     }
   ],
   "submission": {
-    "call": "TechScience ENERGY, Next-Generation Power Systems",
+    "call": "TechScience ENERGY, Recent Advances in Sustainable and Intelligent Petroleum Engineering",
     "deadline": "2027-02-01",
-    "decision": "do_not_submit",
+    "decision": "do_not_upload",
     "manuscript_uploaded": false,
+    "out_of_scope_call": "TechScience ENERGY, Next-Generation Power Systems",
     "patent_counsel_review": "not_requested"
   },
   "test": {
