@@ -29,11 +29,10 @@ Paste `article/manuscript.txt` into the journal Word template. The template is n
 
 ## Steps only an author can finish
 
-1. Ask a patent attorney to read `article/manuscript.txt` and confirm that it discloses no claimed method.
-2. Open the special-issue page and choose Submit to Special Issue.
-3. Paste the title, abstract, and author block into the form.
-4. Put the manuscript into the journal Word or LaTeX template and upload that file.
-5. Add the cover letter required by the author instructions: original, not under review elsewhere, authors have approved the text.
-6. Confirm the submission and keep the receipt.
+1. Open the special-issue page and choose Submit to Special Issue.
+2. Paste the title, abstract, and author block into the form.
+3. Put the manuscript into the journal Word or LaTeX template and upload that file.
+4. Add the cover letter required by the author instructions: original, not under review elsewhere, authors have approved the text.
+5. Confirm the submission and keep the receipt.
 
-Nothing in this repository has been uploaded. Step 1 is still open, so steps 2 to 6 stay closed.
+Nothing in this repository has been uploaded. Nothing is sent until the author completes these steps.

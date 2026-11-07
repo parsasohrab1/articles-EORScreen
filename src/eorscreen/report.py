@@ -119,8 +119,7 @@ def abstract_text(payload: dict) -> str:
             "gas and thermal point guesses match most held-out projects in those groups. "
             "The 1997 polymer viscosity window is narrow beside heavy-oil polymer rows "
             "in the table. The set is wider than the point guess and still misses some "
-            "chemical projects. This text has not been uploaded. Upload waits until a "
-            "patent attorney confirms that it discloses no claimed method."
+            "chemical projects. This text has not been uploaded."
         ),
     ]
     return "\n\n".join(paragraphs)
@@ -175,9 +174,7 @@ def manuscript_text(payload: dict) -> str:
         (
             "The manuscript states split-conformal multinomial logistic regression "
             "and the published 1997 numeric limits. It does not state a chemical "
-            "formulation or a field operating procedure. It has not been uploaded. "
-            "A patent attorney has not confirmed that this wording discloses no "
-            "claimed method."
+            "formulation or a field operating procedure. It has not been uploaded."
         ),
         "",
         "References",

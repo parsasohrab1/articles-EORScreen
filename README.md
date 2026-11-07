@@ -4,7 +4,7 @@ Field-grouped screen of historical enhanced-oil-recovery families, with split-co
 
 **Maturity: TRL 4.** The screen has been run on the public 36-project table. There is no operator trial. See [docs/TRL.md](docs/TRL.md) and [docs/ACHIEVEMENTS.md](docs/ACHIEVEMENTS.md).
 
-**Not uploaded.** The target call is the TechScience ENERGY special issue on sustainable and intelligent petroleum engineering, deadline 1 February 2027. The power-systems issue with the same deadline is a different call. The fit note is [docs/JOURNAL_FIT.md](docs/JOURNAL_FIT.md). The manuscript text is [article/manuscript.txt](article/manuscript.txt). Upload waits for a patent attorney. Nothing has been uploaded.
+**Not uploaded.** The target call is the TechScience ENERGY special issue on sustainable and intelligent petroleum engineering, deadline 1 February 2027. The power-systems issue with the same deadline is a different call. The fit note is [docs/JOURNAL_FIT.md](docs/JOURNAL_FIT.md). The manuscript text is [article/manuscript.txt](article/manuscript.txt). Nothing has been uploaded.
 
 ## Data
 

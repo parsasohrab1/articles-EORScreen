@@ -41,4 +41,4 @@ Read the chemical row beside the gas and thermal rows. A set can contain the his
 
 `article/manuscript.txt` is the measurement text. `article/abstract.md` is the abstract. `docs/SUBMISSION.md` lists the portal steps.
 
-Do not upload. A patent attorney has not confirmed that the manuscript discloses no claimed method. No file has been sent to the journal.
+No file has been sent to the journal.

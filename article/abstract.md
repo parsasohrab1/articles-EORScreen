@@ -13,7 +13,7 @@ The comparison uses the 1997 recommended limits for API gravity, viscosity, perm
 
 There are 36 rows and 36 field groups, 23 range flags, and 3 censored values. The set contains the historical family on 33/36 (0.9167). Mean set size 1.8333. Empty sets 0. The point family matches on 26/36 (0.7222). The 1997 limits contain the historical family on 27/36 (0.7500) and return it alone on 10/36 (0.2778). Chemical: conformal 8/11, point 2/11, rule contains 6/11, rule alone 0/11. Gas: conformal 12/12, point 12/12, rule contains 11/12, rule alone 1/12. Thermal: conformal 13/13, point 12/13, rule contains 10/13, rule alone 9/13.
 
-The chemical point guess is the weak row: it rarely names chemical, while gas and thermal point guesses match most held-out projects in those groups. The 1997 polymer viscosity window is narrow beside heavy-oil polymer rows in the table. The set is wider than the point guess and still misses some chemical projects. This text has not been uploaded. Upload waits until a patent attorney confirms that it discloses no claimed method.
+The chemical point guess is the weak row: it rarely names chemical, while gas and thermal point guesses match most held-out projects in those groups. The 1997 polymer viscosity window is narrow beside heavy-oil polymer rows in the table. The set is wider than the point guess and still misses some chemical projects. This text has not been uploaded.
 <!-- results:end -->
 
 **Keywords:** enhanced oil recovery; split conformal; field holdout; screening criteria
